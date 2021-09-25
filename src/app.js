@@ -7,10 +7,16 @@ import "./assets/img/4geeks.ico";
 
 window.onload = function() {
   //write your code here
-  console.log("yo u up!?");
+  console.log("hello!?");
+  document.getElementById("mybtn").addEventListener("click", updateText);
 };
 
-let who = ["The dog", "My grandma", "His turtle", "My bird"];
+function updateText() {
+  console.log("hello");
+  document.getElementById("excuse").innerHTML = generatedExcuse;
+}
+
+let who = ["The dog", "My grandma", "His turtle", "My bird", "lion"];
 let action = ["ate", "peed", "crushed", "broke"];
 let what = ["my homework", "the keys", "the car"];
 let when = [
@@ -20,17 +26,16 @@ let when = [
   "during my lunch",
   "while I was praying"
 ];
-
 function generateExcuse() {
   // get a random position from the who array
   let excuse =
-    who[Math.floor(Math.random() * 4)] +
+    who[Math.floor(Math.random() * who.length)] +
     " " +
-    action[Math.floor(Math.random() * 4)] +
+    action[Math.floor(Math.random() * action.length)] +
     " " +
-    what[Math.floor(Math.random() * 3)] +
+    what[Math.floor(Math.random() * what.length)] +
     " " +
-    when[Math.floor(Math.random() * 5)];
+    when[Math.floor(Math.random() * when.length)];
   return excuse;
 
   // get a random position from the action array
