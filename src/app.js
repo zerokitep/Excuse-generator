@@ -8,12 +8,11 @@ import "./assets/img/4geeks.ico";
 window.onload = function() {
   //write your code here
   console.log("hello!?");
-  document.getElementById("mybtn").addEventListener("click", updateText);
+  document.getElementById("mybtn").addEventListener("click", reload);
 };
 
-function updateText() {
-  console.log("hello");
-  document.getElementById("excuse").innerHTML = generatedExcuse;
+function reload() {
+  reload = location.reload();
 }
 
 let who = ["The dog", "My grandma", "His turtle", "My bird", "lion"];
